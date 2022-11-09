@@ -20,7 +20,7 @@ export type ExtensionList = Array<{ destroy: () => void }>
 export class ExtensionTarget extends Emitter.Emitter {
   private readonly extensions: ExtensionList = []
 
-  constructor(options: Options) {
+  constructor(options?: Options) {
     super(options);
 
     if (options) {
@@ -41,4 +41,6 @@ export class ExtensionTarget extends Emitter.Emitter {
 
     super.destroy();
   }
+
+  static Extension: Extension.ExtensionClass = Extension.Extension
 }

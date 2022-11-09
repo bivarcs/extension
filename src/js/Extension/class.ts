@@ -8,7 +8,7 @@ export type Options = Emitter.Options;
 /**
  * The first argument is guaranteed to be a class that extends the Extension class.
  */
-export type Entry = [ChildClass, Options?,];
+export type Entry = [ExtensionClass, Options?,];
 
 export type EntryList = Array<Entry>;
 
@@ -17,7 +17,7 @@ export type EntryList = Array<Entry>;
  * (class ChildClass extends Extension)  
  * TODO: Learning better type definition.
  */
-export type ChildClass = { new(target: object, options?: Options): any };
+export type ExtensionClass = { new(target: object, options?: Options): any };
 
 /**
  * The base class of the extension.

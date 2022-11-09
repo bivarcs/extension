@@ -1,6 +1,6 @@
 {
   "name": "@bivarcs/extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A class for creating extensions with Emitter.",
   "author": "bivarcs <bivarcs@gmail.com> (https://github.com/bivarcs)",
   "license": "MIT",
