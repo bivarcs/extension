@@ -1,0 +1,23 @@
+{
+  "entryPoints": [
+    "src/js/Extension/class.ts",
+    "src/js/ExtensionTarget/class.ts",
+    "src/js/Emitter/class.ts"
+  ],
+  "navigationLinks": {
+    "Github": "https://github.com/bivarcs/emitter",
+    "Demo": "https://bivarcs.github.io/emitter/demo/"
+  },
+  "sidebarLinks": {
+    "Github": "https://github.com/bivarcs/emitter",
+    "Demo": "https://bivarcs.github.io/emitter/demo/"
+  },
+  "sourceLinkTemplate": "https://github.com/bivarcs/emitter/blob/main/{path}#L{line}",
+  "out": "./docs/docs",
+  "visibilityFilters": {
+    "protected": true,
+    "private": true,
+    "inherited": true,
+    "external": true,
+  }
+}
