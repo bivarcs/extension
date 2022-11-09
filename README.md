@@ -78,46 +78,4 @@ new HogeExtensionTarget({
 ```
 
 ## License
-Json2Node is available under the [MIT license](LICENSE.md).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Extension is available under the [MIT license](LICENSE.md).
