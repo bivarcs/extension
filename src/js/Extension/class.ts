@@ -17,12 +17,12 @@ export type EntryList = Array<Entry>;
  * (class ChildClass extends Extension)  
  * TODO: Learning better type definition.
  */
-export type ExtensionClass = { new(target: object, options?: Options): any };
+export type ExtensionClass = { new(target: any, options?: Options): any };
 
 /**
  * The base class of the extension.
  */
-export class Extension extends Emitter.Emitter {
+export class Extension<T> extends Emitter.Emitter {
   /**
    * Extension identifier. Uniqueness is expected but not checked.
    */
@@ -31,18 +31,25 @@ export class Extension extends Emitter.Emitter {
   /**
    * any Instance with an extension attached.
    */
-  target: object;
+  target: T;
 
-  static create(options?: Options): Entry {
-    return [this, options,];
-  }
+  /**
+   * `destroy()` to false.
+   */
+  status: boolean = true
 
-  constructor(target: object, options?: Options) {
+  constructor(target: T, options?: Options) {
     super(options);
     this.target = target;
   }
 
   destroy(): void {
     super.destroy();
+
+    this.status = false;
+  }
+
+  static create(options?: Options): Entry {
+    return [this, options,];
   }
 }

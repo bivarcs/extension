@@ -1,6 +1,16 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.0.3] - 2022-11-10
+### New Features
+- Added `status` property.
+
+### Breaking changes
+- Changed to a generic expression type.
+
+### Fix
+- Improved the class inheritance check method.
+
 ## [0.0.2] - 2022-11-09
 ### New Features
 - ExtensionTarget class has `static Extention: Extension`.

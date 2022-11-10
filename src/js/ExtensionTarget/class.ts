@@ -26,7 +26,7 @@ export class ExtensionTarget extends Emitter.Emitter {
     if (options) {
       if (options.extensions) {
         options.extensions.forEach((entry) => {
-          if (entry[0] instanceof Extension.Extension) {
+          if (entry[0].prototype.constructor instanceof Extension.Extension) {
             this.extensions.push(new entry[0](this, entry[1]));
           }
         });
@@ -38,6 +38,8 @@ export class ExtensionTarget extends Emitter.Emitter {
     this.extensions.forEach((extension) => {
       extension.destroy();
     });
+
+    this.extensions.length = 0;
 
     super.destroy();
   }

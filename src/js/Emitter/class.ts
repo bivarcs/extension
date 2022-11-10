@@ -63,7 +63,7 @@ export class Emitter {
   constructor(options?: Options) {
     if (options && options.on) {
       options.on.forEach((entry) => {
-        this.on(entry[0], entry[1], entry[2]);
+        this.on(...entry);
       })
     }
   }
