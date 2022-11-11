@@ -10,8 +10,6 @@ export type Options = Emitter.Options;
  */
 export type Entry = [ExtensionClass, Options?,];
 
-export type EntryList = Array<Entry>;
-
 /**
  * guaranteed to be a class that inherits from Extension.  
  * (class ChildClass extends Extension)  

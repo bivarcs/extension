@@ -5,7 +5,7 @@ import * as Emitter from '../Emitter'
  * Collection of values returned by `Extension.create()`.
  */
 export type Options = Emitter.Options & {
-  extensions?: Extension.EntryList
+  extensions?: Array<Extension.Entry | { create: () => Extension.Entry }>
 }
 
 /**
@@ -26,7 +26,9 @@ export class ExtensionTarget extends Emitter.Emitter {
     if (options) {
       if (options.extensions) {
         options.extensions.forEach((entry) => {
-          if (entry[0].prototype.constructor instanceof Extension.Extension) {
+          if (!Array.isArray(entry)) entry = entry.create();
+
+          if (entry[0].prototype instanceof Extension.Extension) {
             this.extensions.push(new entry[0](this, entry[1]));
           }
         });

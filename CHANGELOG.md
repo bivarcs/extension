@@ -1,6 +1,19 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.0.4] - 2022-11-11
+### New Features
+- ExtensionTarget's options.extensions accepts Extensions as well as EntryList.
+
+```js
+new ExtensionTarget({
+  extensions: [
+    Extension.create(),
+    Extension,  // When there are no arguments, you can omit `create()`.
+  ],
+});
+```
+
 ## [0.0.3] - 2022-11-10
 ### New Features
 - Added `status` property.
